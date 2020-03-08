@@ -1,4 +1,4 @@
-
+{% load static %}
 <!doctype html>
 <html lang="en">
 
@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="{% static 'category/css/min.css' %}">
     
     {% if title %}
     <title>{{title}}</title>
@@ -35,8 +37,8 @@
                             Apps
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Product</a>
-                            <a class="dropdown-item" href="#">Category</a>
+                            <a class="dropdown-item" href="{% url 'product-home' %}">Product</a>
+                            <a class="dropdown-item" href="{% url 'cat-all' %}">Category</a>
                         </div>
                      
                     </li>

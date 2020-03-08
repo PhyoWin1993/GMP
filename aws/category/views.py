@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 # Create your views here.
 
-def create_all(request):
+def all(request):
     return render(request,'category/all.html')
 
 def create(request):
